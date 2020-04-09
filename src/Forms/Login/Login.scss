@@ -1,0 +1,66 @@
+@import '../../Assets/globals/globals.scss';
+
+.login__page {
+    @extend .background_style;
+
+    .login__page__wrapper {
+        width: 580px;
+        height: 700px;
+        border-radius: 15px;
+        box-shadow: 0px 60px 114px 0 #eff8ff;
+        border: solid 1px #c5dced;
+        background-color: #ffffff;
+        padding: 80px 110px 52px;
+    }
+
+    .login__description {
+        font-family: Lato;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.79;
+        letter-spacing: normal;
+        text-align: center;
+        color: #000000;
+        margin: 40px 0 46px;
+    }
+
+    .logo_wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 12px 0 13px;
+    }
+
+    .form_wrapper {
+        width: 360px;
+    }
+
+    .remember {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 8px 0 48px;
+    }
+
+    .forgot {
+        font-family: Lato;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.88;
+        letter-spacing: normal;
+        text-align: right;
+        color: #000000;
+    }
+
+    .submit__button {
+        @extend .button_style;
+    }
+
+}
