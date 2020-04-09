@@ -1,24 +1,27 @@
 import React from 'react';
 import './Fields.scss';
-import { Input, Radio } from 'antd';
+import { Input, Radio , Checkbox} from 'antd';
 import "antd/dist/antd.css";
+const RadioGroup = Radio.Group;
 
-
-export const textField = ({
-    input,
-    type,
-    prefix,
-    placeholder,
-    meta: { touched, error, }
-}) => (
-        <div className='input__wrapp'>
-            <Input autoComplete={input.name} {...input} prefix={prefix} placeholder={placeholder} type={type} />
-            {<span className={(touched && error) ? 'warning' : 'hidden'}>{error}</span>}
-        </div>
+const makeField = Component => ({placeholder, defaltValue, name ,input, meta, children, hasFeedback,  label, ...rest }) => {
+    return (
+      <div
+        className='input__wrapp'
+        label={label}
+        placeholder={placeholder}
+        name={name}
+        defaltValue={defaltValue}
+      >
+        <Component  value={defaltValue} placeholder={placeholder} name={name} autoComplete={input.name} {...input} {...rest} children={children} />
+        <span className={(meta.touched && meta.error) ? 'warning' : 'hidden'}>{meta.error}</span>
+      </div>
     );
+  };
 
-export const radioField = (props) => {
-    return <div className='radio_wrapper'>
-        <Radio {...props} id={props.name}>{props.label}</Radio>
-    </div>
-}
+
+export  const textField = makeField(Input);
+export  const radioField = makeField(RadioGroup);
+export  const checkboxField = makeField(Checkbox);
+
+

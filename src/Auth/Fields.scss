@@ -4,8 +4,8 @@
     flex-direction: column;
 
     .ant-input-prefix {
-        width: 28px;
-        height: 28px;
+        width: 18px;
+        height: 18px;
         margin: 13px 20px 20px 0;
     }
 
@@ -18,11 +18,12 @@
         border-radius: none !important;
     }
 
-    .ant-input-affix-wrapper:hover{
+    .ant-input-affix-wrapper:hover {
         border-color: #c5dced;
     }
 
-    .ant-input-affix-wrapper:focus, .ant-input-affix-wrapper-focused{
+    .ant-input-affix-wrapper:focus,
+    .ant-input-affix-wrapper-focused {
         box-shadow: none !important;
         border-color: #c5dced !important;
     }
@@ -30,7 +31,6 @@
     .ant-input {
         width: 100%;
         height: 30px;
-        opacity: 0.5;
         font-family: Lato;
         font-size: 18px;
         font-weight: 500;
@@ -38,9 +38,7 @@
         font-style: normal;
         line-height: 1.67;
         letter-spacing: normal;
-        text-align: left;
-        color: rgba(0, 0, 0, 0.5);
-        margin-bottom: 5px;
+        color: #000000;
     }
 
     .warning {
@@ -49,7 +47,7 @@
         height: 20px;
     }
 
-    .hidden{
+    .hidden {
         visibility: hidden;
         height: 20px;
     }
@@ -59,61 +57,33 @@
     display: flex;
     align-items: center;
     input {
-        width: 25px;
-        height: 25px;
+        width: 18px;
+        height: 18px;
         border-radius: 15px;
     }
-    label {
-        font-family: Lato;
+    span {
+        padding: 0;
+        border-radius: 15px;
+    }
+    .ant-checkbox-checked .ant-checkbox-inner {
+        background-color: #f69226;
+        border-radius: 15px;
+    }
+    .ant-checkbox-checked::after {
+        border: none;
+    }
+    .ant-checkbox {
+        margin-right: 8px;
+    }
+    .ant-checkbox + span {
+        font-family: Rajdhani;
         font-size: 16px;
-        font-weight: normal;
+        font-weight: 500;
         font-stretch: normal;
         font-style: normal;
-        line-height: 1.88;
+        line-height: normal;
         letter-spacing: normal;
         text-align: left;
         color: #000000;
-        margin-left: 16px;
-    }
-}
-
-.radio_wrapper {
-    .ant-radio-wrapper {
-        margin: 0;
-        display: flex;
-        align-items: center;
-    }
-    .ant-radio {
-        width: 25px;
-        height: 25px;
-        input {
-            width: 25px;
-            height: 25px;
-        }
-    }
-
-    .ant-radio-inner {
-        height: 25px;
-        width: 25px;
-        &:after {
-            width: 15px;
-            height: 15px;
-            top: 4px;
-            left: 4px;
-        }
-    }
-
-    .ant-radio-wrapper > span:last-child {
-        padding: 0 !important;
-        font-family: Lato;
-        font-size: 16px;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.88;
-        letter-spacing: normal;
-        text-align: left;
-        color: #000000;
-        margin-left: 16px;
     }
 }

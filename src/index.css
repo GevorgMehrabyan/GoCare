@@ -1,7 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Lato', 'Rajdhani' , sans-serif;
+  font-size: 100%;
+  font-style: normal;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+imh {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
 body {
   width: 100% !important;
   margin: 0;
-  font-family: Lato;
+  font-family: 'Lato', 'Rajdhani' , sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,76 +94,60 @@ code {
   font-family: Lato;
 }
 
-
-
 @font-face {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 500;
-    src: url('./Assets/fonts/Lato-Regular.ttf');
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 500;
+  src: url("./Assets/fonts/Lato-Thin.ttf");
 }
 
 @font-face {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: bold;
-    src: url('./Assets/fonts/Lato-Bold.ttf');
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  src: url("./Assets/fonts/Lato-Bold.ttf");
 }
 
 @font-face {
   font-family: Lato;
   font-style: normal;
   font-weight: 800;
-  src: url('./Assets/fonts/Lato-Thin.ttf');
+  src: url("./Assets/fonts/Lato-Black.ttf");
 }
 
 @font-face {
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
-  src: url('./Assets/fonts/Lato-Black.ttf');
+  src: url("./Assets/fonts/Lato-Regular.ttf");
 }
 
-*{
-  padding: 0;
-  margin: 0;
-  border: 0;
-  }
-  
-  *,*:before, *:after{
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  }
-  
-  :focus, :active{outline: none;}
-  a:focus, a:active{outline: none;}
-  
-  nav, footer, header, aside {display: block;}
-  
-  html, body{
-  height: 100%;
-  width: 100%;
-  font-family: Lato;
-  font-size: 100%;
+@font-face {
+  font-family: Rajdhani;
   font-style: normal;
-  line-height: 1;
-  font-size: 14px;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  }
-  
-  input, button, textarea{font-family: inherit;}
-  
-  input::-ms-clear{display: none;}
-  button{cursor: pointer;}
-  button::-moz-focus-inner{padding: 0; border: 0;}
-  a, a:visited{text-decoration: none;}
-  a:hover{text-decoration: none;}
-  ul li{list-style: none;}
-  imh{vertical-align: top;}
-  
-  h1, h2, h3, h4, h5, h6{font-size: inherit ; font-weight: 400;}
-  
- 
+  font-weight: 500;
+  src: url("./Assets/fonts/Rajdhani-Medium.ttf");
+}
+
+
+/* reset antd modal */
+.ant-modal-footer {
+  display: none;
+}
+.ant-modal-close {
+  display: none;
+}
+.ant-modal {
+  top: 50px !important;
+  padding: 0 !important;
+}
+.ant-modal-content {
+  border-radius: 15px !important;
+}
+.ant-modal-mask {
+  background-color: #000000 !important;
+  opacity: 0.8;
+}
+.ant-modal-body {
+  padding: 0 !important;
+}
