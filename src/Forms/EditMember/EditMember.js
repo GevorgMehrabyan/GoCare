@@ -1,8 +1,10 @@
 import React from 'react';
-import AddForm from './EditForm';
+import EditForm from './EditForm';
 import './EditMember.scss';
+import { connect } from 'react-redux';
 
-const EditMember = () => {
+const EditMember = (props) => {
+    const {initialName} = props;
     const onSubmit = (addData) => {
         console.log(addData)
     }
@@ -10,10 +12,16 @@ const EditMember = () => {
         <div className='add__memeber__modal'>
             <h1>Edit Team Member</h1>
             <div className='form_wrapper'>
-                <AddForm onSubmit={onSubmit} />
+                <EditForm onSubmit={onSubmit}  initialValues={initialName}/>
             </div>
         </div>
     )
 }
 
-export default EditMember;
+const mapStateToProps = state => {
+    return {
+        initialName: state.edit.data
+    };
+};
+
+export default connect(mapStateToProps)(EditMember) ;

@@ -2,7 +2,7 @@ export const validate = values => {
     const errors = {}
     if (!values.name) {
         errors.name = 'Required'
-    } else if (!/^[a-zA-Z]+$/i.test(values.name)) {
+    } else if (!/^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/i.test(values.name)) {
         errors.name = 'Should be only letters'
     }
 

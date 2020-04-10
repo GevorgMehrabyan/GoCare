@@ -32,7 +32,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  font-family: 'Lato', 'Rajdhani' , sans-serif;
+  font-family: 'Lato', 'Rajdhani' ,'Gill Sans',  sans-serif;
   font-size: 100%;
   font-style: normal;
   line-height: 1;
@@ -85,7 +85,8 @@ h6 {
 body {
   width: 100% !important;
   margin: 0;
-  font-family: 'Lato', 'Rajdhani' , sans-serif;
+
+  font-family: 'Lato', 'Rajdhani', 'Gill Sans' , sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -100,6 +101,13 @@ code {
   font-weight: 500;
   src: url("./Assets/fonts/Lato-Thin.ttf");
 }
+
+/*@font-face {*/
+/*  font-family: Gill Sans;*/
+/*  font-style: normal;*/
+/*  font-weight: 400;*/
+/*  src: url('./Assets/fonts/GILSANS.ttf');*/
+/*}*/
 
 @font-face {
   font-family: Lato;

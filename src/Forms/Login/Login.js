@@ -2,11 +2,15 @@ import React from 'react';
 import './Login.scss';
 import LoginForm from './LoginForm';
 import logo from '../../Assets/images/logo.png';
+import { connect } from 'react-redux';
+import {login} from '../../Redux/Auth/AuthActions';
 
-const Login = () => {
+const Login = (props) => {
+    const {login} = props;
     const onSubmit = (loginData) => {
-        console.log(loginData)
+        login(loginData);
     }
+
     return (
         <div className='login__page'>
             <div className='login__page__wrapper'>
@@ -22,4 +26,9 @@ const Login = () => {
     )
 }
 
-export default Login;
+const mapDispatchToProps = (dispatch) =>{
+    return{
+        login: values => dispatch(login(values))
+    }
+}
+export default connect(null, mapDispatchToProps)(Login) ;

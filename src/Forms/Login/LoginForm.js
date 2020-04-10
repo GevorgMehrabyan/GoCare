@@ -12,7 +12,7 @@ const LoginForm = (props) => {
     return (
         <form onSubmit={handleSubmit}>
             <Field
-                name='userName'
+                name='email'
                 type='text'
                 component={textField}
                 prefix={<img src={username} alt='user logo' />}

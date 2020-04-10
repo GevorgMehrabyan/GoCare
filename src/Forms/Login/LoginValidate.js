@@ -1,11 +1,11 @@
 export const validate = values => {
     const errors = {}
 
-    //Username
-    if (!values.userName) {
-        errors.userName = 'Required'
-    } else if (values.userName.length < 6) {
-        errors.userName = 'Must be 6 characters'
+    //Email
+    if (!values.email) {
+        errors.email = 'Required'
+    } else if (values.email && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+        errors.email = 'Invalid email address'
     }
 
     //Password

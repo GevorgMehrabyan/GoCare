@@ -1,18 +1,23 @@
-import {createStore} from 'redux';
-import {combineReducers} from "redux";
-import {createBrowserHistory} from 'history';
+import { createStore, applyMiddleware } from 'redux';
+import { createBrowserHistory } from 'history';
+import thunk from 'redux-thunk';
 import rootReducer from "./rootReducer";
+import { composeWithDevTools } from 'redux-devtools-extension';
+
 import { reducer as formReducer } from 'redux-form'
 
+import { combineReducers } from 'redux';
 
 const store = createStore(
     combineReducers({
-        ...rootReducer,
-        form: formReducer,
+            ...rootReducer,
+            form: formReducer
     }),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    composeWithDevTools(
+        applyMiddleware(thunk)
+    ));
 
-);
+const history  = createBrowserHistory();
 
-const history = createBrowserHistory();
-export {store, history};
+export {store , history}
+

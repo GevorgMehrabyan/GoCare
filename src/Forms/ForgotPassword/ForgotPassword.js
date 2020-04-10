@@ -2,12 +2,14 @@ import React from 'react';
 import './ForgotPassword.scss';
 import ForgotPasswordForm from '../ForgotPassword/ForgotPasswordForm';
 import logo from '../../Assets/images/logo.png';
-
+import { connect } from 'react-redux';
+import {forgotPass} from '../../Redux/Auth/AuthActions';
 
 const ForgotPassword = (props) => {
+    const {forgotPass} = props;
     const onSubmit = (forgotData) => {
+        forgotPass(forgotData);
         props.history.push('./reset-password');
-        console.log(forgotData)
     }
     return (
         <div className='forgot__password__page'>
@@ -24,5 +26,10 @@ const ForgotPassword = (props) => {
         </div>
     )
 }
+const mapDispatchToProps = () => {
+    return{
+        verifyPassword: (values) => dispatchEvent(forgotPass(values))
+    }
+}
 
-export default ForgotPassword;
+export default connect(null, mapDispatchToProps)(ForgotPassword);

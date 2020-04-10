@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Home.scss';
 import { Modal, Button } from 'antd';
 import "antd/dist/antd.css";
-// import AddMember from '../../Forms/AddMember/AddMember';
+import AddMember from '../../Forms/AddMember/AddMember';
 import EditMember from '../../Forms/EditMember/EditMember';
 
 const Home = (props) => {
@@ -13,9 +13,9 @@ const Home = (props) => {
         <div className='modal_style'>
             <Button type="primary" onClick={showModal}>
                 Open Modal
-        </Button>
+            </Button>
             <Modal
-                width={480} 
+                width={480}
                 visible={visible}
                 onCancel={handleCancel}
             >

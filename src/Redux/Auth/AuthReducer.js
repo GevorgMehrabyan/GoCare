@@ -1,5 +1,5 @@
-import { LOGOUT, LOGIN, REGISTRATION, RESET_PASSWORD } from './Types';
-import User from './FakeData';
+import { LOGIN, FORGOT_PASSWORD, RESET_PASSWORD } from './Types';
+import {User} from './FakeData';
 
 const token = localStorage.getItem('token');
 
@@ -15,20 +15,14 @@ export const AuthReducer = (state = initState, action) => {
         user: action.user,
         token: action.token
       };
-    case REGISTRATION:
-      return {
-        ...state,
-        user: action.user
-      };
+    // case FORGOT_PASSWORD:
+    //   return {
+    //     ...state,
+    //     user: action.user
+    //   };
     case RESET_PASSWORD:
       return {
         ...state
-      };
-    case LOGOUT:
-      return {
-        ...state,
-        user: null,
-        token: null
       };
     default:
       return state;
