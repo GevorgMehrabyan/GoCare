@@ -1,7 +1,6 @@
 import React from 'react';
 import '../AddMember/AddForm.scss';
 import { Field, reduxForm } from 'redux-form'
-import {connect} from 'react-redux';
 import { textField, checkboxField, radioField } from '../../Auth/Fields';
 import { validate } from './EditFormVallidate';
 import username from '../../Assets/images/username.png';
@@ -17,28 +16,28 @@ const EditForm = props => {
                 type='text'
                 component={textField}
                 prefix={<img src={username} alt='password logo' />}
-                placeholder='Francesca Metts'
+                placeholder='Fullname'
             />
             <Field
                 name='email'
                 type='email'
                 component={textField}
                 prefix={<img src={email} alt='email logo' />}
-                default='gocare_info@gmail.com'
+                placeholder='Email'
             />
             <Field
                 name='password'
                 type='password'
                 component={textField}
                 prefix={<img src={password} alt='password logo' />}
-                placeholder='* * * * * * * * * * * * '
+                placeholder='Password '
             />
             <Field
                 name='changePassword'
                 type='password'
                 component={textField}
                 prefix={<img src={password} alt='password logo' />}
-                placeholder='* * * * * * * * * * * * '
+                placeholder='Change password '
             />
             <div className='switch__list'>
                 <div className='simple__switch'>
@@ -70,39 +69,31 @@ const EditForm = props => {
                     </Field>
                 </div>
             </div>
-            <div className='channels_wrap'>
-                <h3>Channels Allowed :</h3>
-                <div className='chanel_list'>
-                    <div>
-                        <Field className='checkbox_wrap' name="All" component={checkboxField} >All</Field>
-                        <Field className='checkbox_wrap' name="Email" component={checkboxField}>Email</Field>
-                    </div>
-                    <div>
-                        <Field className='checkbox_wrap' name="Webchat" component={checkboxField} >Webchat</Field>
-                        <Field className='checkbox_wrap' name="SMS" component={checkboxField} >SMS</Field>
-                    </div>
-                    <div>
-                        <Field className='checkbox_wrap' name="Facebook" component={checkboxField} >Facebook</Field>
-                    </div>
-                    <div>
-                        <Field className='checkbox_wrap' name="Twitter" component={checkboxField}>Twitter</Field>
-                    </div>
-                </div>
+          <div className='channels_wrap'>
+            <h3>Channels Allowed :</h3>
+            <div className='chanel_list'>
+              <div>
+                <Field className='checkbox_wrap' name="Facebook" component={checkboxField} value="Facebook">Facebook</Field>
+                <Field className='checkbox_wrap' name="Webchat" component={checkboxField} value="Webchat">Webchat</Field>
+              </div>
+              <div>
+                <Field className='checkbox_wrap' name="SMS" component={checkboxField} value="SMS">SMS</Field>
+              </div>
+              <div>
+                <Field className='checkbox_wrap' name="Email" component={checkboxField} value="Email">Email</Field>
+              </div>
+              <div>
+                <Field className='checkbox_wrap' name="Twitter" component={checkboxField} value="Twitter">Twitter</Field>
+              </div>
             </div>
+          </div>
             <button className='submit__button' type='submit'>Save</button>
         </form >
     )
 }
 
-
-const mapStateToProps = (state, props) => ({
-    initialValues: state.edit.data,
-})
-
-export default connect(
-    mapStateToProps
-)(reduxForm({
-    form: 'EditForm',
-    validate,
-    enableReinitialize: true
-})(EditForm))
+export default reduxForm({
+  form: 'EditForm',
+  validate,
+  enableReinitialize: true
+})(EditForm)

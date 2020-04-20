@@ -2,10 +2,10 @@ export const validate = values => {
     const errors = {}
 
     //newPassword
-    if (!values.newPassword) {
-        errors.newPassword = 'Required'
-    } else if (values.newPassword.length < 6) {
-        errors.newPassword = 'Must be 6 characters'
+    if (!values.password) {
+        errors.password = 'Required'
+    } else if (values.password.length < 6) {
+        errors.password = 'Must be 6 characters'
     }
 
     //ConfirmPassword
@@ -13,14 +13,14 @@ export const validate = values => {
         errors.confirmPassword = 'Required'
     } else if (values.confirmPassword.length < 6) {
         errors.confirmPassword = 'Must be 6 characters'
-    }else if( values.confirmPassword && values.newPassword) {
+    }else if( values.confirmPassword && values.password) {
         let qty = 0;
-        for (let i = 0; i < values.newPassword.length; ++i) {
-            if (values.newPassword[i] === values.confirmPassword[i]) {
+        for (let i = 0; i < values.password.length; ++i) {
+            if (values.password[i] === values.confirmPassword[i]) {
                 qty++;
             }
         }
-        if (qty !== values.newPassword.length) {
+        if (qty !== values.password.length) {
             errors.confirmPassword = 'Passwords dont match'
         }
     }

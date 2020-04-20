@@ -1,15 +1,22 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Login.scss';
 import LoginForm from './LoginForm';
 import logo from '../../Assets/images/logo.png';
 import { connect } from 'react-redux';
 import {login} from '../../Redux/Auth/AuthActions';
+import { useHistory } from 'react-router-dom';
+
 
 const Login = (props) => {
-    const {login} = props;
+    const {loginCall} = props;
+    const history = useHistory();
     const onSubmit = (loginData) => {
-        login(loginData);
+        loginCall(loginData);
     }
+
+    useEffect( () => {
+        localStorage.getItem('token') && history.push('/home')
+    })
 
     return (
         <div className='login__page'>
@@ -26,9 +33,15 @@ const Login = (props) => {
     )
 }
 
-const mapDispatchToProps = (dispatch) =>{
+const mapStateToProps = (state) => {
     return{
-        login: values => dispatch(login(values))
+        token: state.auth.token
     }
 }
-export default connect(null, mapDispatchToProps)(Login) ;
+
+const mapDispatchToProps = (dispatch) =>{
+    return{
+        loginCall: values => dispatch(login(values))
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Login) ;

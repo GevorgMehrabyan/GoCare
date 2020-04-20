@@ -1,16 +1,21 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './ForgotPassword.scss';
 import ForgotPasswordForm from '../ForgotPassword/ForgotPasswordForm';
 import logo from '../../Assets/images/logo.png';
 import { connect } from 'react-redux';
 import {forgotPass} from '../../Redux/Auth/AuthActions';
+import { useHistory } from 'react-router-dom';
 
 const ForgotPassword = (props) => {
-    const {forgotPass} = props;
+    const {forgotPass, token} = props;
+    const history = useHistory();
     const onSubmit = (forgotData) => {
         forgotPass(forgotData);
-        props.history.push('./reset-password');
     }
+
+    useEffect( () => {
+        localStorage.getItem('token') && history.push('/home')
+    })
     return (
         <div className='forgot__password__page'>
             <div className='forgot__password__page__wrapper'>
@@ -26,10 +31,16 @@ const ForgotPassword = (props) => {
         </div>
     )
 }
-const mapDispatchToProps = () => {
+
+const mapStateToProps = (state) => {
     return{
-        verifyPassword: (values) => dispatchEvent(forgotPass(values))
+        token: state.auth.token
+    }
+}
+const mapDispatchToProps = (dispatch) => {
+    return{
+        forgotPass: (values) => dispatch(forgotPass(values))
     }
 }
 
-export default connect(null, mapDispatchToProps)(ForgotPassword);
+export default connect(mapStateToProps, mapDispatchToProps)(ForgotPassword);

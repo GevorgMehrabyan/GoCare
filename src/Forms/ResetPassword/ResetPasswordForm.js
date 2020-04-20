@@ -11,7 +11,7 @@ const ResetPasswordForm = (props) => {
     return (
         <form onSubmit={handleSubmit}>
             <Field
-                name='newPassword'
+                name='password'
                 type='password'
                 component={textField}
                 prefix={<img src={password} alt='password logo' />}

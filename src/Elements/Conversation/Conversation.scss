@@ -1,0 +1,150 @@
+.conversation__part{
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 5px 29px 0 rgba(82, 87, 93, 0.1);
+  background-color: #ffffff;
+
+  .option_list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 30px;
+    box-shadow: 0px 3px 7px 0 #f2f2f2;
+    background-color: #ffffff;
+    h2{
+      font-family: Rajdhani;
+      font-size: 20px;
+      font-weight: 700;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: normal;
+      color: var(--pure-black);
+      margin: 0 !important;
+    }
+    .choose{
+      .ant-checkbox-checked .ant-checkbox-inner {
+        background-color: #f69226;
+        border-radius: 15px;
+      }
+      .ant-checkbox-checked::after {
+        border: none;
+      }
+      .ant-checkbox + span{
+        padding: 0;
+      }
+      .ant-checkbox {
+        margin-right: 8px;
+      }
+      .ant-checkbox + span {
+        font-family: Rajdhani;
+        font-size: 16px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #000000;
+      }
+      .ant-checkbox-inner{
+        border-radius: 20px;
+      }
+    }
+  }
+
+  .search_wrapper{
+    width: 100%;
+    padding: 0 30px;
+    margin: 12px 0 4px;
+    cursor: pointer;
+    .ant-input-prefix {
+      width: 21px;
+      height: 21px;
+      margin: 13px 20px 20px 0;
+    }
+
+    .ant-input-affix-wrapper {
+      display: flex;
+      align-items: center;
+      border: none;
+      padding: 0;
+      border-bottom: 2px solid #d0dbe5;
+      border-radius: 0 !important;
+    }
+
+    .ant-input-affix-wrapper:hover {
+      border-color: #c5dced;
+    }
+
+    .ant-input-affix-wrapper:focus,
+    .ant-input-affix-wrapper-focused {
+      box-shadow: none !important;
+      border-color: #c5dced !important;
+    }
+    img{
+      width: 21px;
+      height: 21px;
+    }
+  }
+
+  .member_list{
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+
+    .simple__member{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+      cursor: pointer;
+      .member{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .ant-badge-status-dot{
+          width: 11px;
+          height: 11px;
+          position: absolute;
+          top: -20px;
+          z-index: 2;
+        }
+        .ant-badge-status-text{
+          display: none;
+        }
+      }
+      h2{
+        font-family: Rajdhani;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.13;
+        letter-spacing: 0.48px;
+        color: #52575d;
+        margin: 0 0 0 16px !important;
+      }
+      .badge{
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f69226;
+        border-radius: 15px;
+        font-family: Rajdhani;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #ffffff;
+      }
+    }
+  }
+}

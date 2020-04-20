@@ -1,0 +1,213 @@
+.subscribe_part {
+  width: 390px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6fa;
+
+  p {
+    font-family: Rajdhani;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.79;
+    letter-spacing: normal;
+    text-align: left;
+    color: #575757;
+    margin: 0 !important;
+  }
+
+  .subscriber__details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0 64px;
+    background: white;
+
+    h1 {
+      margin: 0 0 24px 34px !important;
+      font-family: Rajdhani;
+      font-size: 22px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.36;
+      letter-spacing: normal;
+      color: #1d76bb;
+    }
+
+    hr {
+      width: 100%;
+      background-color: #d0dbe5;
+      height: 3px;
+      border: none;
+    }
+
+    .subscriber__info {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 0 20px;
+      margin-top: 20px;
+
+      hr {
+        margin: 20px 0 28px;
+        height: 0px;
+        border: solid 1px #e8e8e8;
+        background-color: #e8e8e8;
+      }
+
+      .info {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+        .avatar_wrap{
+          width: 94px;
+          height: 94px;
+          padding: 6px;
+          border: 1px solid #f69226;
+          border-radius: 50px;
+          margin-right: 11px;
+          .ant-avatar {
+            background: white;
+            width: 100%;
+            height: 100%;
+            img {
+              border-radius: 40px;
+            }
+          }
+        }
+
+
+
+        .subs_description {
+          display: flex;
+          flex-direction: column;
+
+          div {
+            width: 100%;
+            font-family: Rajdhani;
+            font-size: 14px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            letter-spacing: normal;
+            color: var(--pure-black);
+            line-height: 1.79;
+            img {
+              margin-right: 11px;
+              width: 11px;
+              height: 10px;
+            }
+          }
+
+          h3 {
+            font-family: Rajdhani;
+            font-size: 16px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            letter-spacing: normal;
+            text-align: left;
+            line-height: 1.5;
+            color: #52575d;
+            margin: 0 0 14px 0 !important;
+          }
+        }
+      }
+    }
+  }
+
+  .tabs_info {
+    margin-top: 6px;
+    width: 100%;
+    height: 100%;
+    background: white;
+    padding: 15px 20px 0 20px;
+
+    div.ant-tabs-nav-animated > * {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .ant-tabs-bar {
+      border: none;
+      margin: 0 0 24px 0 !important;;
+    }
+
+    .ant-tabs-nav {
+      width: 100%;
+    }
+
+    .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab {
+      margin: 0 !important;
+      border-radius: 4px;
+      border: solid 1px #52575d;
+      background-color: #ffffff;
+      font-family: Rajdhani;
+      font-size: 16px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #52575d;
+      width: 112px;
+      height: 36px;
+    }
+
+    .ant-tabs-tab-active {
+      background-color: #f69226 !important;
+      border: none !important;
+      color: #ffffff !important;
+    }
+
+    .journey_list{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      .simple_journey{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+        .from_who{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 16px;
+          div{
+            font-family: Rajdhani;
+            font-size: 12px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            letter-spacing: normal;
+            color: #91949a;
+            img{
+              width: 10px;
+              height: 10px;
+              margin-right: 16px;
+            }
+          }
+          h3{
+            font-family: Rajdhani;
+            font-size: 16px;
+            font-weight: 700;
+            font-stretch: normal;
+            font-style: normal;
+            letter-spacing: normal;
+            text-align: left;
+            color: var(--pure-black);
+            margin: 0!important;
+          }
+        }
+      }
+    }
+  }
+}

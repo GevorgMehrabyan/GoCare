@@ -17,7 +17,7 @@ const ForgotPassword = props => {
         placeholder='Email'
       />
       <button className='submit__button' type='submit'>Submit</button>
-      <p className='link_to'><Link to={'/login'} >Cancel</Link></p>
+      <p className='link_to'><Link to={'/'} >Cancel</Link></p>
     </form>
   )
 }

@@ -1,0 +1,2 @@
+(this.webpackJsonpgocare=this.webpackJsonpgocare||[]).push([[0],{201:function(n,c,t){},202:function(n,c,t){"use strict";var o=t(204);c.a=function(n,c,t){Object(o.a)(n,"[antd: ".concat(c,"] ").concat(t))}},204:function(n,c,t){"use strict";var o={};function a(n,c){0}function i(n,c,t){c||o[t]||(n(!1,t),o[t]=!0)}c.a=function(n,c){i(a,n,c)}}}]);
+//# sourceMappingURL=0.98eeb77f.chunk.js.map
